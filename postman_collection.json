@@ -1,0 +1,244 @@
+{
+	"info": {
+	  "_postman_id": "ecb01f45-f5de-4b98-9cad-5ed7c83d9b2b",
+	  "name": "LLaMA 3.1 Postman Collection",
+	  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+	  "version": "1.0.1",
+	  "description": "LLaMA tabanlı Chat API test koleksiyonu."
+	},
+	"item": [
+	  {
+		"name": "Java Spring Boot API",
+		"description": "Spring tabanlı backend API testleri",
+		"item": [
+		  {
+			"name": "Ping API - Sağlık Kontrolü",
+			"request": {
+			  "method": "GET",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:8080/api/ping",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "8080",
+				"path": ["api", "ping"]
+			  },
+			  "description": "Servisin çalışır durumda olup olmadığını kontrol eder."
+			},
+			"response": []
+		  },
+		  {
+			"name": "Chat - Yazılım Mimarisi Açıklaması",
+			"request": {
+			  "method": "POST",
+			  "header": [
+				{
+				  "key": "Content-Type",
+				  "value": "application/json",
+				  "type": "text"
+				}
+			  ],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n  \"message\": \"Katmanlı mimari (Layered Architecture) nedir, avantajları nelerdir?\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:8080/api/chat",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "8080",
+				"path": ["api", "chat"]
+			  },
+			  "description": "Modelden yazılım mimarisi hakkında teknik bilgi istenir."
+			},
+			"response": []
+		  },
+		  {
+			"name": "Chat - SQL Performans Sorgusu",
+			"request": {
+			  "method": "POST",
+			  "header": [
+				{
+				  "key": "Content-Type",
+				  "value": "application/json",
+				  "type": "text"
+				}
+			  ],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n  \"message\": \"SQL'de büyük veri setlerinde performansı artırmak için neler yapılabilir?\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:8080/api/chat",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "8080",
+				"path": ["api", "chat"]
+			  },
+			  "description": "Veritabanı performansı üzerine öneriler alınır."
+			},
+			"response": []
+		  },
+		  {
+			"name": "Chat - Hata Mesajı Açıklaması",
+			"request": {
+			  "method": "POST",
+			  "header": [
+				{
+				  "key": "Content-Type",
+				  "value": "application/json",
+				  "type": "text"
+				}
+			  ],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n  \"message\": \"Java'da 'NullPointerException' hatası neden alınır ve nasıl çözülür?\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:8080/api/chat",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "8080",
+				"path": ["api", "chat"]
+			  },
+			  "description": "Geliştiriciye yönelik hata çözüm açıklamaları."
+			},
+			"response": []
+		  },
+		  {
+			"name": "Chat - Örnek Kod",
+			"request": {
+			  "method": "POST",
+			  "header": [
+				{
+				  "key": "Content-Type",
+				  "value": "application/json",
+				  "type": "text"
+				}
+			  ],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n  \"message\": \"Java'da RESTful bir servis nasıl yazılır, örnek verir misin?\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:8080/api/chat",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "8080",
+				"path": ["api", "chat"]
+			  },
+			  "description": "Kod örneği ile modelin teknik yanıt verme becerisi test edilir."
+			},
+			"response": []
+		  }
+		]
+	  },
+	  {
+		"name": "Python Flask API",
+		"description": "Python Flask servis testleri",
+		"item": [
+		  {
+			"name": "Chat - Python List Comprehension",
+			"request": {
+			  "method": "POST",
+			  "header": [
+				{
+				  "key": "Content-Type",
+				  "value": "application/json",
+				  "type": "text"
+				}
+			  ],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n  \"message\": \"Python'da list comprehension nedir, örnek verir misin?\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:5000/chat",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "5000",
+				"path": ["chat"]
+			  },
+			  "description": "Python diline özgü pratik yapıların sorgulanması."
+			},
+			"response": []
+		  },
+		  {
+			"name": "Chat - Alternatif Model Kullanımı",
+			"request": {
+			  "method": "POST",
+			  "header": [
+				{
+				  "key": "Content-Type",
+				  "value": "application/json",
+				  "type": "text"
+				}
+			  ],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n  \"message\": \"Python ile bir API istemcisi nasıl yazılır?\",\n  \"model\": \"llama3:8b\"\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:5000/chat",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "5000",
+				"path": ["chat"]
+			  },
+			  "description": "Belirli bir model ile gelişmiş kullanım testi."
+			},
+			"response": []
+		  }
+		]
+	  },
+	  {
+		"name": "Ollama Doğrudan API",
+		"description": "Ollama servisi ile doğrudan etkileşim",
+		"item": [
+		  {
+			"name": "Ollama - Kod Anlatımı",
+			"request": {
+			  "method": "POST",
+			  "header": [
+				{
+				  "key": "Content-Type",
+				  "value": "application/json",
+				  "type": "text"
+				}
+			  ],
+			  "body": {
+				"mode": "raw",
+				"raw": "{\n  \"model\": \"llama3:8b\",\n  \"prompt\": \"Aşağıdaki Python kodunun ne yaptığını açıkla:\\n\\ndef is_prime(n):\\n    if n <= 1:\\n        return False\\n    for i in range(2, int(n**0.5)+1):\\n        if n % i == 0:\\n            return False\\n    return True\",\n  \"stream\": false\n}"
+			  },
+			  "url": {
+				"raw": "http://localhost:11434/api/generate",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "11434",
+				"path": ["api", "generate"]
+			  },
+			  "description": "Kod analiz yeteneğini test eder."
+			},
+			"response": []
+		  },
+		  {
+			"name": "Ollama - Model Listesi",
+			"request": {
+			  "method": "GET",
+			  "header": [],
+			  "url": {
+				"raw": "http://localhost:11434/api/tags",
+				"protocol": "http",
+				"host": ["localhost"],
+				"port": "11434",
+				"path": ["api", "tags"]
+			  },
+			  "description": "Yüklü modelleri listeler."
+			},
+			"response": []
+		  }
+		]
+	  }
+	]
+  }
+  
